@@ -393,6 +393,7 @@ set_target_properties(${TARGET_LIB_IOTJS} PROPERTIES
   OUTPUT_NAME iotjs
   ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
 )
+link_directories(${CMAKE_EXTERNAL_SYSROOT}/usr/lib/aarch64-linux-gnu)
 target_include_directories(${TARGET_LIB_IOTJS} PRIVATE ${IOTJS_INCLUDE_DIRS})
 target_link_libraries(${TARGET_LIB_IOTJS}
   ${JERRY_LIBS}
